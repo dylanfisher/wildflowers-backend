@@ -5,7 +5,7 @@ module Api
 
       # GET /drawings
       def index
-        @drawings = Drawing.all
+        @drawings = Drawing.last(10)
 
         render json: @drawings
       end

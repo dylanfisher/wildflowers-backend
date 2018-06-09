@@ -20,7 +20,7 @@ class Drawing < ApplicationRecord
   end
 
   def drawing_key
-    "drawing_#{id}.svg"
+    "#{Rails.env}/drawing_#{id}.svg"
   end
 
   private
