@@ -5,7 +5,7 @@ module Api
 
       # GET /drawings
       def index
-        @drawings = Drawing.last(10)
+        @drawings = Drawing.order(id: :desc).limit(10).reverse
 
         render json: @drawings
       end
